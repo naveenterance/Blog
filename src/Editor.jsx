@@ -21,6 +21,7 @@ const Editor = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        required
         type="text"
         placeholder="Title"
         value={title}
@@ -28,6 +29,7 @@ const Editor = (props) => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <textarea
+        required
         type="textbox"
         placeholder="Write a Blog"
         value={content}
@@ -37,6 +39,7 @@ const Editor = (props) => {
       ></textarea>
 
       <input
+        required
         type="text"
         placeholder="Author"
         value={author}

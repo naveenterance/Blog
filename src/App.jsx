@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Data from "./Data";
-import Articles from "./Articles";
-import Editor from "./Editor";
+import Data from "./components/Data";
+import Articles from "./components/Articles";
+import Editor from "./components/Editor";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { ArticleDetails } from "./ArticleDetails";
+import { ArticleDetails } from "./components/ArticleDetails";
 
 const App = () => {
   const [current, setCurrent] = useState(() => {

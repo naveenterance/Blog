@@ -5,11 +5,13 @@ export const ArticleDetails = (props) => {
     <>
       {props.list
         .filter((article) => props.current === article.title)
-        .map((filteredArticle, index) => (
-          <div key={index}>
-            <h2>{filteredArticle.title}</h2>
-            <p>{filteredArticle.content}</p>
-            <p>{filteredArticle.author}</p>
+        .map((article, index) => (
+          <div key={index} className="p-8 shadow-lg  lg:w-3/4 mx-auto mt-4">
+            <p className="lg:text-8xl text-4xl font-bold ">{article.title}</p>
+            <p className="my-12 lg:mx-8">{article.content}</p>
+            <p className="font-semibold opacity-75  text-lg  mt-2">
+              by {article.author}
+            </p>
           </div>
         ))}
     </>

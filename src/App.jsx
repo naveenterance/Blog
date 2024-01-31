@@ -28,7 +28,11 @@ const App = () => {
         />
         <Route
           path="editor"
-          element={<Data>{(data) => <Editor setList={data.setList} />}</Data>}
+          element={
+            <Data>
+              {(data) => <Editor list={data.list} setList={data.setList} />}
+            </Data>
+          }
         />
         {current && (
           <Route

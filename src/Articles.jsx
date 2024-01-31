@@ -21,14 +21,14 @@ const Articles = (props) => {
           {props.list.length} Articles added
         </p>
         <button
-          className="m-2 p-2 lg:w-1/6 w-1/2  rounded-full border-4  hover:border-pink-300  bg-slate-50  font-bold"
+          className="m-2 p-2 lg:w-1/6 w-1/2  rounded-full border-4 border-slate-300  hover:border-pink-300  bg-slate-50  font-bold"
           onClick={() => navigate("/editor")}
         >
           Add
         </button>
 
         <button
-          className="m-2 p-2 lg:w-1/6 w-1/2  rounded-full border-4  hover:border-pink-300  bg-slate-50  font-bold"
+          className="m-2 p-2 lg:w-1/6 w-1/2  rounded-full border-4 border-slate-300  hover:border-pink-300  bg-slate-50  font-bold"
           onClick={handleClear}
         >
           Clear the Local storage
@@ -40,7 +40,7 @@ const Articles = (props) => {
           <li
             key={index}
             onClick={() => handleClick(article.title)}
-            className="p-8  rounded-lg border-4  hover:border-pink-300  bg-slate-50 m-1 "
+            className="p-8  rounded-lg border-4 border-slate-300  hover:border-pink-300  bg-slate-50 m-1 "
           >
             <p className="text-3xl font-bold m-4">
               {article.title.replace(/-/g, " ")}

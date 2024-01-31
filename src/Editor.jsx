@@ -24,21 +24,31 @@ const Editor = (props) => {
         type="text"
         placeholder="Title"
         value={title}
+        className="m-2 p-2 lg:w-1/3   rounded-lg border-4 border-slate-200 hover:border-pink-300  bg-slate-50  font-bold   focus:outline-none  focus:border-pink-300"
         onChange={(e) => setTitle(e.target.value)}
       />
-      <input
-        type="text"
-        placeholder="Content"
+      <textarea
+        type="textbox"
+        placeholder="Write a Blog"
         value={content}
+        rows="16"
         onChange={(e) => setContent(e.target.value)}
-      />
+        class="block p-2 m-2 w-3/4  rounded-lg border-4 border-slate-200 focus:outline-none focus:border-pink-300"
+      ></textarea>
+
       <input
         type="text"
         placeholder="Author"
         value={author}
+        className="m-2 p-2 lg:w-1/3  rounded-lg border-4 border-slate-200  hover:border-pink-300  bg-slate-50  font-bold  focus:outline-none focus:border-pink-300"
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <button type="submit">Submit</button>
+      <button
+        className="m-2 p-2 lg:w-1/6   rounded-full border-4 border-slate-200 hover:border-pink-300  bg-slate-50  font-bold"
+        type="submit"
+      >
+        Submit
+      </button>
     </form>
   );
 };

@@ -45,10 +45,7 @@ const Articles = (props) => {
             <p className="text-2xl font-bold m-4">
               {article.title.replace(/-/g, " ")}
             </p>
-            <p className="m-4">
-              {article.content.slice(0, 100)}{" "}
-              {article.content.length >= 100 && "..."}
-            </p>
+            <p className="m-4 truncate ">{article.content}</p>
             <p className="font-semibold opacity-75 m-4">by {article.author}</p>
           </li>
         ))}

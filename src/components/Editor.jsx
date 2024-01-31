@@ -10,10 +10,16 @@ const Editor = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!props.list.some((articles) => articles.title.includes(title))) {
+    if (
+      !props.list.some(
+        (article) =>
+          article.title.trim().toLowerCase() ===
+          title.toLowerCase().trim().replace(/\s+/g, "-")
+      )
+    ) {
       props.setList((prevList) => [
         ...prevList,
-        { title: title.replace(/ /g, "-"), content, author },
+        { title: title.trim().replace(/\s+/g, "-"), content, author },
       ]);
 
       navigate("/articles");

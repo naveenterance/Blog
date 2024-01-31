@@ -12,7 +12,7 @@ const Editor = (props) => {
 
     props.setList((prevList) => [
       ...prevList,
-      { title: title, content: content, author: author },
+      { title: title.replace(/ /g, "-"), content: content, author: author },
     ]);
 
     navigate("/articles");

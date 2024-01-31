@@ -17,7 +17,7 @@ const Articles = (props) => {
   return (
     <>
       <div className="flex">
-        <p className="lg:text-3xl  text-xl font-medium m-4 text-slate-300">
+        <p className="lg:text-3xl  text-xl font-medium m-4 text-slate-300 ">
           {props.list.length} Articles added
         </p>
         <button
@@ -42,7 +42,9 @@ const Articles = (props) => {
             onClick={() => handleClick(article.title)}
             className="p-8  rounded-lg border-4  hover:border-pink-300  bg-slate-50 m-1 "
           >
-            <p className="text-4xl font-bold m-4">{article.title}</p>
+            <p className="text-3xl font-bold m-4">
+              {article.title.replace(/-/g, " ")}
+            </p>
             <p className="m-4">
               {article.content.slice(0, 100)}{" "}
               {article.content.length >= 100 && "..."}

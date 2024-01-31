@@ -50,7 +50,7 @@ const Editor = (props) => {
         value={content}
         rows="16"
         onChange={(e) => setContent(e.target.value)}
-        class="block p-2 m-2 w-3/4  rounded-lg border-4 border-slate-200 focus:outline-none focus:border-pink-300"
+        className="block p-2 m-2 w-3/4  rounded-lg border-4 border-slate-200 focus:outline-none focus:border-pink-300"
       ></textarea>
 
       <input

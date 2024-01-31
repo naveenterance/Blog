@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Data = (props) => {
+const Data = ({ children }) => {
   const [list, setList] = useState(() => {
     const storedList = localStorage.getItem("articleList");
     return storedList
@@ -31,7 +31,7 @@ const Data = (props) => {
     localStorage.setItem("articleList", JSON.stringify(list));
   }, [list]);
 
-  return <>{props.children({ list, setList })}</>;
+  return <>{children({ list, setList })}</>;
 };
 
 export default Data;

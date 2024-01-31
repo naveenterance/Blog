@@ -42,7 +42,7 @@ const Articles = (props) => {
             onClick={() => handleClick(article.title)}
             className="p-8  rounded-lg border-4 border-slate-300  hover:border-pink-300  bg-slate-50 m-1 "
           >
-            <p className="text-3xl font-bold m-4">
+            <p className="text-2xl font-bold m-4">
               {article.title.replace(/-/g, " ")}
             </p>
             <p className="m-4">
